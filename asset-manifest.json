@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/HabitTrackerWebsite/static/css/main.e6c13ad2.css",
-    "main.js": "/HabitTrackerWebsite/static/js/main.bdfd7a99.js",
-    "static/js/787.eb2a6c3f.chunk.js": "/HabitTrackerWebsite/static/js/787.eb2a6c3f.chunk.js",
-    "index.html": "/HabitTrackerWebsite/index.html",
-    "main.e6c13ad2.css.map": "/HabitTrackerWebsite/static/css/main.e6c13ad2.css.map",
-    "main.bdfd7a99.js.map": "/HabitTrackerWebsite/static/js/main.bdfd7a99.js.map",
-    "787.eb2a6c3f.chunk.js.map": "/HabitTrackerWebsite/static/js/787.eb2a6c3f.chunk.js.map"
+    "main.css": "/habit_track/static/css/main.e6c13ad2.css",
+    "main.js": "/habit_track/static/js/main.859ecaf4.js",
+    "static/js/787.eb2a6c3f.chunk.js": "/habit_track/static/js/787.eb2a6c3f.chunk.js",
+    "index.html": "/habit_track/index.html",
+    "main.e6c13ad2.css.map": "/habit_track/static/css/main.e6c13ad2.css.map",
+    "main.859ecaf4.js.map": "/habit_track/static/js/main.859ecaf4.js.map",
+    "787.eb2a6c3f.chunk.js.map": "/habit_track/static/js/787.eb2a6c3f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.bdfd7a99.js"
+    "static/js/main.859ecaf4.js"
   ]
 }
