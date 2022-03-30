@@ -1,7 +1,7 @@
 # Getting Started 
 ## Install
 
-1. Install [NodeJS]([https://nodejs.org/en/])
+1. Install [NodeJS](https://nodejs.org/en/)
 
 2. Install Yarn - Open your Terminal anywhere and run  `npm install --global yarn`
 
