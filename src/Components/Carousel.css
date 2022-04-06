@@ -1,6 +1,6 @@
 .slick-arrow.slick-prev, .slick-arrow.slick-next{
-    background-color: green;
-    color: black;
+    background-color: aquamarine;
+    color: rgb(230, 0, 0);
 
 }
 .custom-indicator li{
