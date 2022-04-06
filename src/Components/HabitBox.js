@@ -8,16 +8,16 @@ import Divider from "@mui/material/Divider";
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 const style = {
-  width: "50%",
-  maxWidth: 360,
+  width: "80%",
+  bgradius: "100px",
   bgcolor: "beige",
 };
-export default function HabitBox() {
+export default function HabitBox({ Daten }) {
   const data = ["Hallo", "ich", "bin", "deine", "Gewohnheiten"];
   return (
-    <div>
+    <div style={{ flex: 1, display: "flex" }}>
       <List sx={style} component="nav" aria-label="mailbox folders">
-        {data.map((x) => {
+        {Daten.map((x) => {
           return (
             <div>
               <ListItem button>

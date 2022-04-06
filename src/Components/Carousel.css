@@ -11,4 +11,9 @@ border-radius: 10px;
 background-color: aqua;
 }
 
+.slick-slide slick-active slick-center slick-current{
+    width: 200px;
+    background-color:blue;
+    color: black;
+}
 

@@ -14,6 +14,15 @@ const NextButton = () => {
   return <Button />;
 };
 
+const Data = [
+  "Saugen 15:30Uhr",
+  "Lernen 16 Uhr",
+  "Saugen 15:30Uhr",
+  "Lernen 16 Uhr",
+  "Saugen 15:30Uhr",
+  "Lernen 16 Uhr",
+];
+
 export default class Carousel extends Component {
   render() {
     const settings = {
@@ -23,7 +32,7 @@ export default class Carousel extends Component {
       className: "center",
       centerMode: true,
       infinite: false,
-      centerPadding: "60px",
+      centerPadding: "30px",
       slidesToShow: 3,
       speed: 500,
       // prevArrow: PrevButton(),
@@ -55,7 +64,7 @@ export default class Carousel extends Component {
                   {date - 1 + x}.{month}.{year}
                 </p>
                 {/* <HabitsDaily /> */}
-                <HabitBox />
+                <HabitBox Daten={Data} />
               </div>
             );
           })}
