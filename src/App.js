@@ -1,20 +1,12 @@
-import * as React from 'react';
-import SignIn from "./pages/SignIn";
-import {BrowserRouter,Routes,Route} from "react-router-dom";
-import SignUp from "./pages/SignUp";
+import "./App.css";
+import { ThemeProvider } from "@emotion/react";
+import defaultTheme from "./layouts/themes/default";
+import RootRoutes from "./routes/root.routes";
 
 export default function App() {
-
-
   return (
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={  <SignIn></SignIn>}/>
-          <Route path="/SignUp" element={  <SignUp></SignUp>}/>
-        </Routes>
-
-      </BrowserRouter>
-
-
+    <ThemeProvider theme={defaultTheme}>
+      <RootRoutes />
+    </ThemeProvider>
   );
 }
