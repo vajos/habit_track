@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Alert, Button, Form, Input, message } from "antd";
+import { Alert, Button, Form, Input, message, Space } from "antd";
 import auth0 from "../../config/auth0";
 import { Link, Routes, useLocation, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -69,7 +69,7 @@ export default function LoginView() {
           <Input.Password />
         </Form.Item>
 
-        <Form.Item style={{ margin: 10 }} wrapperCol={{ offset: 8, span: 16 }}>
+        <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
           <Button type="primary" htmlType="submit">
             Login
           </Button>
