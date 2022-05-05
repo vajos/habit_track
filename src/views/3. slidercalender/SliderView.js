@@ -1,15 +1,31 @@
 import { useState } from "react";
-import { Alert, Button, Form, Input, message } from "antd";
-import auth0 from "../../config/auth0";
-import { Link, Routes, useLocation, useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { updateUser, resetUser } from "./../../user/userReducer";
-import { RouteName } from "../../routes/routesnames";
+import { Carousel } from "antd";
+import SliderInput from "./SliderInput";
 
 export default function SliderView() {
-    return (
-        <>
-
-        </>
-    );
+  const contentStyle = {
+    height: "160px",
+    color: "#fff",
+    lineHeight: "160px",
+    textAlign: "center",
+    background: "#364d79",
+  };
+  return (
+    <>
+      <Carousel effect="fade">
+        <div>
+          <SliderInput />
+        </div>
+        <div>
+          <SliderInput />
+        </div>
+        <div>
+          <SliderInput />
+        </div>
+        <div>
+          <SliderInput />
+        </div>
+      </Carousel>
+    </>
+  );
 }

@@ -12,6 +12,9 @@ export default function LoginView() {
   const location = useLocation();
   const locationState = location.state;
   const navigate = useNavigate();
+  const tailLayout = {
+    wrapperCol: { offset: 8, span: 16 },
+  };
 
   const handleSubmit = (values) => {
     auth0.client.login(
@@ -69,13 +72,15 @@ export default function LoginView() {
           <Input.Password />
         </Form.Item>
 
-        <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+        <Form.Item {...tailLayout}>
           <Button type="primary" htmlType="submit">
             Login
           </Button>
 
           <Link to="/public/register">
-            <Button type="primary">Register</Button>
+            <Button style={{ margin: "0 8px" }} type="button">
+              Register
+            </Button>
           </Link>
         </Form.Item>
       </Form>
