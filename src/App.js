@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import "./App.less";
 import { ThemeProvider } from "@emotion/react";
 import defaultTheme from "./themes/default";
@@ -23,5 +24,17 @@ export default function App() {
         </Provider>
       </ThemeProvider>
     </ApolloProvider>
+=======
+import "./App.css";
+import { ThemeProvider } from "@emotion/react";
+import defaultTheme from "./layouts/themes/default";
+import RootRoutes from "./routes/root.routes";
+
+export default function App() {
+  return (
+    <ThemeProvider theme={defaultTheme}>
+      <RootRoutes />
+    </ThemeProvider>
+>>>>>>> d193a2d53e810fa461db9f876c1eccbb90e7cf54
   );
 }
