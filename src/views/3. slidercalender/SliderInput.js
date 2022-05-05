@@ -20,7 +20,7 @@ export default function SliderInput() {
           flexDirection: "column",
         }}
       >
-        {moment().format("DD-MM-YYYY")}
+        {/* {moment().format("DD-MM-YYYY")} */}
         <CheckboxGroup
           style={{
             flex: 1,
