@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-<<<<<<< HEAD
 import Story from "./components/Story";
 import { Button, Space } from "antd";
 import { Link } from "react-router-dom";
@@ -55,17 +54,5 @@ export default function HomeView() {
         </Space>
       </div>
     </StoryContainer>
-=======
-
-const Headline = styled.h1`
-  color: ${(props) => props.theme.colors.primary500};
-`;
-
-export default function HomeView() {
-  return (
-    <div>
-      <Headline>Crap Stories</Headline>
-    </div>
->>>>>>> d193a2d53e810fa461db9f876c1eccbb90e7cf54
   );
 }
