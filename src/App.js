@@ -1,20 +1,27 @@
-import * as React from 'react';
-import SignIn from "./pages/SignIn";
-import {BrowserRouter,Routes,Route} from "react-router-dom";
-import SignUp from "./pages/SignUp";
+import "./App.less";
+import { ThemeProvider } from "@emotion/react";
+import defaultTheme from "./themes/default";
+import RootRoutes from "./routes/root.routes";
+import { Provider } from "react-redux";
+import store from "./config/redux";
+import { PersistGate } from "redux-persist/integration/react";
+import { persistStore } from "redux-persist";
+import { ApolloProvider } from "@apollo/client";
+import apClient from "./config/apollo";
+import { useNavigate } from "react-router-dom";
+
+const persistor = persistStore(store);
 
 export default function App() {
-
-
   return (
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={  <SignIn></SignIn>}/>
-          <Route path="/SignUp" element={  <SignUp></SignUp>}/>
-        </Routes>
-
-      </BrowserRouter>
-
-
+    <ApolloProvider client={apClient()}>
+      <ThemeProvider theme={defaultTheme}>
+        <Provider store={store}>
+          <PersistGate loading={null} persistor={persistor}>
+            <RootRoutes />
+          </PersistGate>
+        </Provider>
+      </ThemeProvider>
+    </ApolloProvider>
   );
 }
