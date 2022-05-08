@@ -1,15 +1,27 @@
-import { useState } from "react";
-import { Alert, Button, Form, Input, message } from "antd";
-import auth0 from "../../config/auth0";
-import { Link, Routes, useLocation, useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { updateUser, resetUser } from "./../../user/userReducer";
-import { RouteName } from "../../routes/routesnames";
+
+import {Button} from "antd";
+import {Link, useNavigate} from "react-router-dom";
+
 
 export default function CategoryView() {
-  return (
-      <>
 
-      </>
-  );
+
+    const b = ["Gesundheit", "Meditation", "Studium", "Sport", "Unterhaltung"];
+
+
+
+    return (
+        <>
+            <h1>Kaegorie auswählen:</h1>
+
+
+            {b.map(x=>{
+                return (<Link to={"/evaluate/"+x}>
+                    <Button type="primary">{x}</Button>
+                </Link>)
+            })}
+
+
+        </>
+    );
 }

@@ -8,6 +8,7 @@ import DeadlineView from "../views/8. deadline/DeadlineView";
 import EvaluateView from "../views/5. evaluate/EvaluateView";
 import SliderView from "../views/3. slidercalender/SliderView";
 import CategoryView from "../views/4. category/CategoryView";
+import DefineHabitView from "../views/6. defineHabit/DefineHabitView";
 
 export default function ProtectedRoutes() {
   return (
@@ -20,7 +21,7 @@ export default function ProtectedRoutes() {
       <Route path={`${RouteName.SLIDECALENDER}/*`} element={<SliderView />} />
       <Route path={`${RouteName.CATEGORY}/*`} element={<CategoryView />} />
       <Route path={`${RouteName.EVALUATE}/*`} element={<EvaluateView />} />
-      <Route path={`${RouteName.DEFINEHABIT}/*`} element={<HomeRoutes />} />
+      <Route path={`${RouteName.DEFINEHABIT}/*`} element={<DefineHabitView />} />
       <Route path={`${RouteName.TIMETABLE}/*`} element={<TimeTableView />} />
       <Route path={`${RouteName.DEADLINE}/*`} element={<DeadlineView />} />
       <Route path="*" element={<NotFound />} />
