@@ -2,6 +2,10 @@ import { useState } from "react";
 import { Carousel } from "antd";
 import SliderInput from "./SliderInput";
 
+import moment from "moment";
+
+//DATABASE =>
+
 export default function SliderView() {
   const contentStyle = {
     height: "160px",
@@ -10,20 +14,34 @@ export default function SliderView() {
     textAlign: "center",
     background: "#364d79",
   };
+
+  const plainOptions = ["Habit 1", "Habit 2", "Habit 3"];
   return (
     <>
       <Carousel effect="fade">
         <div>
-          <SliderInput />
+          <SliderInput
+            plainOptions={plainOptions}
+            date={moment().format("DD-MM-YYYY")}
+          />
         </div>
         <div>
-          <SliderInput />
+          <SliderInput
+            plainOptions={plainOptions}
+            date={moment().format("DD-MM-YYYY")}
+          />
         </div>
         <div>
-          <SliderInput />
+          <SliderInput
+            date={moment().format("DD-MM-YYYY")}
+            plainOptions={plainOptions}
+          />
         </div>
         <div>
-          <SliderInput />
+          <SliderInput
+            date={moment().format("DD-MM-YYYY")}
+            plainOptions={plainOptions}
+          />
         </div>
       </Carousel>
     </>

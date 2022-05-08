@@ -1,9 +1,8 @@
-import moment from "moment";
 import { Checkbox } from "antd";
 const CheckboxGroup = Checkbox.Group;
 
-export default function SliderInput() {
-  const plainOptions = ["Habit 1", "Habit 2", "Habit 3"];
+export default function SliderInput(plainOptions, date) {
+  // const plainOptionsss = ["Habit 1", "Habit 2", "Habit 3"];
   function onChange(e) {
     console.log(`checked = ${e.target.checked}`);
   }
@@ -20,7 +19,8 @@ export default function SliderInput() {
           flexDirection: "column",
         }}
       >
-        {/* {moment().format("DD-MM-YYYY")} */}
+        {console.log(date)}
+        {/* {date} */}
         <CheckboxGroup
           style={{
             flex: 1,
@@ -29,7 +29,7 @@ export default function SliderInput() {
             fontWeight: "20px",
             margin: "20px",
           }}
-          options={plainOptions}
+          options={plainOptions.plainOptions}
           onChange={onChange}
         />
       </div>
