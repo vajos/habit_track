@@ -6,8 +6,8 @@ export const RouteName = {
   REGISTER: "/register",
   SLIDECALENDER: "/slide",
   CATEGORY: "/category",
-  EVALUATE: "/evaluate",
-  DEFINEHABIT: "/definehabit",
+  EVALUATE: "/evaluate/:category",
+  DEFINEHABIT: "/definehabit/:category/:bewertung",
   TIMETABLE: "/timetable",
   DEADLINE: "/deadline",
 };
