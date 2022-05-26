@@ -7,23 +7,26 @@ import {updateUser, resetUser} from "./../../user/userReducer";
 import {RouteName} from "../../routes/routesnames";
 import Paragraph from "antd/es/typography/Paragraph";
 import moment from "moment";
+import {useRecoilState} from "recoil";
+import {category_state, evaluate_state} from "../../atoms/atoms";
 
 export default function EvaluateView() {
 
 
-    let {category} = useParams();
+    const [evaluate, setEvaluate] = useRecoilState(evaluate_state);
+    const navigate = useNavigate();
 
-    console.log(category);
+    function redirect(evaluate) {
+        setEvaluate(evaluate);
+        navigate("/definehabit")
+    }
+
 
     return (
         <> <Space direction="vertical">
             <Paragraph>Wie möchten Sie ihre Fortschritte bewerten?</Paragraph>
-            <Link to={"/definehabit/"+category+"/jaundnein"}>
-                <Button>MIT JA ODER NEIN</Button>
-            </Link>
-            <Link to={"/definehabit/"+category+"/beitrag"}>
-            <Button>MIT EINEM BEITRAG</Button>
-            </Link>
+                <Button onClick={redirect.bind(this,"JA_NEIN")}>MIT JA ODER NEIN</Button>
+            <Button onClick={redirect.bind(this,"BEITRAG")}>MIT EINEM BEITRAG</Button>
         </Space>
         </>
     );
