@@ -5,6 +5,7 @@ import { Link, Routes, useLocation, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { updateUser, resetUser } from "./../../user/userReducer";
 import { RouteName } from "../../routes/routesnames";
+import { useAuth0 } from "@auth0/auth0-react";
 
 export default function LoginView() {
   const dispatch = useDispatch();
@@ -12,9 +13,51 @@ export default function LoginView() {
   const location = useLocation();
   const locationState = location.state;
   const navigate = useNavigate();
+
   const tailLayout = {
     wrapperCol: { offset: 8, span: 16 },
   };
+
+  const { loginWithRedirect, isAuthenticated } = useAuth0();
+  const { isLoading, error } = useAuth0();
+
+  function LoginButton(props) {
+    return (
+      !isAuthenticated && (
+        <button onClick={() => loginWithRedirect()}>
+          Anmelden
+        </button>
+      )
+    );
+  }
+  
+  function LogoutButton(props) {
+    const { logout, isAuthenticated } = useAuth0();
+    return (
+      isAuthenticated && (
+        <button onClick={() => logout()}>
+          Abmelden
+        </button>
+      )
+    );
+  }
+
+  function Profile(props) {
+    const { user, isAuthenticated } = useAuth0();
+    return (
+      isAuthenticated && (
+        <article className="column">
+          {user?.picture && <img src={user.picture} alt={user?.name} />}
+          <h2>{user?.name}</h2>
+          <ul>
+              {Object.keys(user).map((objKey, i) => <li key={i}>{objKey}: {user[objKey]} </li>)}
+          </ul>
+        </article>
+      )
+    );
+  }
+  
+
 
   const handleSubmit = (values) => {
     auth0.client.login(
@@ -35,14 +78,36 @@ export default function LoginView() {
         if (locationState) {
           navigate(locationState.from);
         } else {
-          navigate("/");
+          navigate("/slide");
         }
       }
     );
   };
 
   return (
-    <>
+  // <>
+      <main className="column">
+        <h1>Auth0 Login</h1>
+        <p>e-mail: beispiel@hft-stuttgart.de</p>
+        <p>passwort: Test12345</p>
+        {error && <p>Authentication Error</p>}
+        {!error && isLoading && <p>Loading...</p>}
+        {!error && !isLoading && (
+          <>
+            <LoginButton/>
+            <LogoutButton/>
+            <Profile/>
+          </>
+        )}
+      </main>
+
+  
+
+        /* isAuthenticatedd && (
+        <button onClick={() => logout()}>
+          Abmelden
+        </button>
+    )
       {errorMessage ? (
         <div style={{ marginBottom: "24px" }}>
           <Alert message={errorMessage} type="error" showIcon />
@@ -84,6 +149,8 @@ export default function LoginView() {
           </Link>
         </Form.Item>
       </Form>
-    </>
+    </> */
   );
 }
+
+
