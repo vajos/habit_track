@@ -6,7 +6,7 @@ import RequireAuth from "./components/RequireAuth";
 
 export default function RootRoutes() {
   return (
-    <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route
           path="*"
