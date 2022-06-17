@@ -31,7 +31,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: rm -rf node_modules && yarn install --frozen-lockfile
       - run: yarn run build
-    
+      - env:
+             CI: false
       
       
       - name: Deploy Github Pages
