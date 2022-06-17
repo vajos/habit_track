@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import LoginView from "../LoginView";
+import LoginView from "../../1. login/LoginView";
 import { AllProviders } from "../../../testUtils";
 import auth0 from "../../../config/auth0";
 

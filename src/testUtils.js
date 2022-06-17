@@ -6,6 +6,7 @@ import defaultTheme from "./themes/default";
 import { Provider } from "react-redux";
 import store from "./config/redux";
 import apClient from "./config/apollo";
+import {ApolloProvider} from "@apollo/client";
 
 const noCacheApolloConfig = {
   defaultOptions: {
