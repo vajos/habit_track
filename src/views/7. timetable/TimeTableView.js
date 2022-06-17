@@ -100,14 +100,6 @@ export default function TimeTableView() {
                 <Checkbox disabled={checked}>Freitag</Checkbox>
                 <Checkbox disabled={checked}>Samstag</Checkbox>
                 <Checkbox disabled={checked}>Sonntag</Checkbox>
-                <Dropdown overlay={menu}>
-                    <a onClick={e => e.preventDefault()}>
-                        <Space>
-                            Hover me
-                            <DownOutlined />
-                        </Space>
-                    </a>
-                </Dropdown>
             </Space>
 
             <Space direction="horizontal">
