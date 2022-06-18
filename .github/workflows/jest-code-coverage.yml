@@ -33,7 +33,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: yarn install
       - run: yarn add react-scripts
-      - run: yarn test --watchAll --coverage --useStderr=false
+      - run: react-scripts test --watchAll --coverage --useStderr=false --forceExit
         env:
              CI: false
       
