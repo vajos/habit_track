@@ -13,11 +13,8 @@ import DefineHabitView from "../views/6. defineHabit/DefineHabitView";
 export default function ProtectedRoutes() {
   return (
     <Routes>
-      <Route
-        path={RouteName.INDEX}
-        element={<Navigate to={RouteName.HOME} />}
-      />
-      <Route path={`${RouteName.HOME}/*`} element={<HomeRoutes />} />
+      <Route path={RouteName.INDEX} element={<Navigate to={RouteName.HOME} />}/>
+      <Route path={`${RouteName.HOME}/*`} element={<SliderView />} />
       <Route path={`${RouteName.SLIDECALENDER}/*`} element={<SliderView />} />
       <Route path={`${RouteName.CATEGORY}/*`} element={<CategoryView />} />
       <Route path={`${RouteName.EVALUATE}/*`} element={<EvaluateView />} />

@@ -6,7 +6,7 @@ import RequireAuth from "./components/RequireAuth";
 
 export default function RootRoutes() {
   return (
-    <BrowserRouter>
+      <BrowserRouter basename={"habit_track"}>
       <Routes>
         <Route
           path="*"

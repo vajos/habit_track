@@ -4,6 +4,8 @@ import Paragraph from "antd/es/typography/Paragraph";
 import moment from 'moment';
 
 import { useState } from "react";
+import {useRecoilState} from "recoil";
+import {deadline_state, time_table_state} from "../../atoms/atoms";
 
 
 
@@ -12,9 +14,18 @@ export default function DeadlineView() {
     const [zieltermin, setZieltermin] = useState(false);
     const format = 'HH:mm';
 
+    const [deadline, setdeadline] = useRecoilState(deadline_state);
 
-    function onChange(date, dateString) {
-        console.log(date, dateString);
+    let object = {
+        start_date: null,
+        target_date: null,
+        reminder_time: null,
+        priority: null
+    };
+
+    function onChangeStartDate(date, dateString) {
+        console.log(date);
+        object.start_date = date;
     }
 
     function onSearch(val) {
@@ -30,12 +41,16 @@ export default function DeadlineView() {
         }
     }
 
+    function onChangePriority(priority) {
+        object.priority = priority;
+    }
+
     return (
         <> <Space direction="vertical">
 
             <Space direction="horizontal">
                 <Paragraph>Anfangsdatum wählen</Paragraph>
-                <DatePicker onChange={onChange}/>
+                <DatePicker onChange={onChangeStartDate}/>
             </Space>
 
             <Space direction="horizontal">
@@ -54,8 +69,7 @@ export default function DeadlineView() {
                     showSearch
                     placeholder="Priority"
                     optionFilterProp="children"
-                    onChange={onChange}
-                    onSearch={onSearch}
+                    onChange={onChangePriority}
                     filterOption={(input, option) =>
                         option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
                     }
