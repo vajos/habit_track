@@ -2,10 +2,12 @@ import { useState } from "react";
 import { Alert, Button, Form, Input, message, Space } from "antd";
 import auth0 from "../../config/auth0";
 import { Link, Routes, useLocation, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import { updateUser, resetUser } from "./../../user/userReducer";
 import { RouteName } from "../../routes/routesnames";
 
 export default function LoginView() {
+  const dispatch = useDispatch();
   const [errorMessage, setErrorMessage] = useState("");
   const location = useLocation();
   const locationState = location.state;
@@ -24,11 +26,11 @@ export default function LoginView() {
       (err, authResult) => {
         if (err) {
           setErrorMessage(`Login failed: ${err.description}`);
-          // dispatch(resetUser());
+          dispatch(resetUser());
           return;
         }
         message.success("Login successful");
-        // dispatch(updateUser({ accessToken: authResult.accessToken }));
+        dispatch(updateUser({ accessToken: authResult.accessToken }));
 
         if (locationState) {
           navigate(locationState.from);
@@ -40,7 +42,7 @@ export default function LoginView() {
   };
 
   return (
-    <div style={{ marginTop: "200px" }}>
+    <>
       {errorMessage ? (
         <div style={{ marginBottom: "24px" }}>
           <Alert message={errorMessage} type="error" showIcon />
@@ -82,6 +84,6 @@ export default function LoginView() {
           </Link>
         </Form.Item>
       </Form>
-    </div>
+    </>
   );
 }

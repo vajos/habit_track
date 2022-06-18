@@ -14,23 +14,13 @@
     "apollo-link-context": "^1.0.20",
     "auth0-js": "9.19.0",
     "axios": "^0.26.1",
-<<<<<<< HEAD
-    "jest": "^28.1.1",
-    "jest-dom": "^4.0.0",
-=======
     "babel": "^6.23.0",
     "jest": "^28.1.1",
->>>>>>> 77264ef4aff811102bf2233a1de91fa8c69b2934
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-redux": "^8.0.1",
     "react-router-dom": "6.3.0",
-<<<<<<< HEAD
-    "react-scripts": "5.0.0",
-    "react-test-renderer": "^18.1.0",
-=======
     "react-scripts": "^5.0.1",
->>>>>>> 77264ef4aff811102bf2233a1de91fa8c69b2934
     "recoil": "^0.7.3-alpha.2",
     "redux": "^4.2.0",
     "redux-persist": "^6.0.0",
@@ -39,7 +29,7 @@
   "devDependencies": {
     "@craco/craco": "6.4.3",
     "@testing-library/jest-dom": "5.16.3",
-    "@testing-library/react": "^12.1.2",
+    "@testing-library/react": "12.1.4",
     "@testing-library/react-hooks": "^8.0.0",
     "@testing-library/user-event": "13.5.0",
     "craco-less": "2.0.0",

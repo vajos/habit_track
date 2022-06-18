@@ -1,6 +1,6 @@
-// import { render, screen } from "@testing-library/react";
-// import HomeView from "../HomeView";
-// import { AllProviders } from "../../../testUtils";
+import { render, screen } from "@testing-library/react";
+import HomeView from "../HomeView";
+import { AllProviders } from "../../../testUtils";
 
 
 describe("HomeView", () => {
