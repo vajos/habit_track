@@ -1,9 +1,8 @@
 // import { render, screen } from "@testing-library/react";
 // import userEvent from "@testing-library/user-event";
-// import LoginView from "./../LoginView";
+// import LoginView from "../LoginView";
 // import { AllProviders } from "../../../testUtils";
 // import auth0 from "../../../config/auth0";
-// import LoginRoutes from "../Login.routes";
 
 // describe("LoginView", () => {
 //   it("should enable a user to login", async () => {
@@ -13,7 +12,7 @@
 
 //     render(
 //       <AllProviders>
-//         <LoginRoutes />
+//         <LoginView />
 //       </AllProviders>
 //     );
 //     const username = await screen.findByLabelText(/Username/i);
@@ -56,4 +55,5 @@
 //     spy.mockRestore();
 //   });
 // });
+
 test("on intial render", () => {});

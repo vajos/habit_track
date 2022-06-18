@@ -3,10 +3,18 @@ import React from "react";
 import "./index.css";
 import App from "./App";
 import ReactDOM from "react-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import LoginRoutes from "./views/1. login/Login.routes";
+import LoginView from "./views/1. login/LoginView";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}></Route>
+        <Route path="/login" element={<LoginView />}></Route>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );
