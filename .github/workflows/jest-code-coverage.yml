@@ -41,6 +41,8 @@ jobs:
       - name: Codecov
         uses: codecov/codecov-action@v3.1.0
         with:
+            # Repository upload token - get it from codecov.io. Required only for private repositories
+            token: 31ab0f95-302c-43f8-bbec-8d1dd104af2e
             # Directory to search for coverage reports.
             directory: coverage
  
