@@ -44,15 +44,16 @@ export default function LoginView() {
 
   function Profile(props) {
     const { user, isAuthenticated } = useAuth0();
+
+
+    if(isAuthenticated){
+        console.log(user.user_metadata);
+    }
+    //console.log(user.user_metadata)
     return (
       isAuthenticated && (
-        <article className="column">
-          {user?.picture && <img src={user.picture} alt={user?.name} />}
-          <h2>{user?.name}</h2>
-          <ul>
-              {Object.keys(user).map((objKey, i) => <li key={i}>{objKey}: {user[objKey]} </li>)}
-          </ul>
-        </article>
+          <p>{JSON.stringify(user)}</p>
+
       )
     );
   }
@@ -91,12 +92,10 @@ export default function LoginView() {
         <p>e-mail: beispiel@hft-stuttgart.de</p>
         <p>passwort: Test12345</p>
         {error && <p>Authentication Error</p>}
-
-          <>
             <LoginButton/>
             <LogoutButton/>
-            <Profile/>
-          </>
+            <Profile></Profile>
+
       </main>
 
   

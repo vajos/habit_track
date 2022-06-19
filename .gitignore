@@ -1,8 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-<<<<<<< HEAD
+
 /.vscode
-=======
->>>>>>> d193a2d53e810fa461db9f876c1eccbb90e7cf54
+
+.env
 
 # dependencies
 /node_modules
@@ -25,3 +25,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+*.gcno
+*.gcda
+*.gcov
+test
