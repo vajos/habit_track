@@ -41,6 +41,9 @@ export default function TimeTableView() {
     const testHandler = (e) => {
         //sethabit_name(input);
         navigate("/deadline")
+    } 
+       const loginHandler = (e) => {
+        navigate("/login")
     }
 
 
@@ -121,6 +124,9 @@ export default function TimeTableView() {
             </Space>
             <Space direction="horizontal">
                     <Button onClick={testHandler} >Weiter</Button>
+            </Space>
+            <Space direction="horizontal">
+                    <Button onClick={loginHandler} >WeiterLogin</Button>
             </Space>
         </Space>
     );
