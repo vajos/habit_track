@@ -21,13 +21,15 @@ export default function LoginView() {
     const {loginWithRedirect, isAuthenticated} = useAuth0();
     const {isLoading, error} = useAuth0();
 
-    loginWithRedirect({
-        appState: {target: '/habit_track'}
-    }).then(r => null)
+
      function LoginButton(props) {
+
+
         return (
             !isAuthenticated && (
-                <button onClick={() => loginWithRedirect()}>
+                <button onClick={() => loginWithRedirect({
+                    redirectUri: "https://vajos.github.io/habit_track/"
+                })}>
                     Anmelden
                 </button>
             )
