@@ -13,18 +13,17 @@ describe("CategoryView", () => {
       .spyOn(auth0.client, "login")
       .mockImplementation((values, cb) => cb(null, { accessToken: "123" }));
 
-    const { result } = renderHook(() => useRecoilValue(category_state), {
+    renderHook(() => useRecoilValue(category_state), {
       wrapper: RecoilRoot,
     });
 
     const history = render(
-      <RecoilRoot>
-        <CategoryView />
-      </RecoilRoot>
+      <AllProviders>
+        <RecoilRoot>
+          <CategoryView />
+        </RecoilRoot>
+      </AllProviders>
     );
-    // const username = await screen.findByLabelText(/Username/i);
-    // const password = await screen.findByLabelText(/password/i);
-    // const submit = await screen.findByRole("button", { name: /login/i });
 
     /**
      * If Button geklickt redirect
@@ -34,46 +33,12 @@ describe("CategoryView", () => {
     const but = await screen.getByRole("button", { name: /unterhaltung/i });
     userEvent.click(but);
 
-    expect(history.location.pathname).toEqual("./evaluate");
-    expect(result.current).toEqual(0);
-
-    // const res = await request(app).get("/redirectUri?code=code&state=state");
-    // expect(exchangeForAuthTokenSpy).toHaveBeenCalledTimes(1);
-    // expect(exchangeForAuthTokenSpy).toHaveBeenCalledWith("code", "state");
-    // expect(res.status).toEqual(301);
-    // expect(res.headers.location).toContain(
-    //   "/callback?code=200&token=access_token"
-    // );
+    expect(window.location.pathname).toEqual("/evaluate");
 
     spy.mockRestore();
   });
 
   it("test reirect funtion", () => {});
-
-  // it("should show an error if something is wrong with the login", async () => {
-  //   const spy = jest
-  //     .spyOn(auth0.client, "login")
-  //     .mockImplementation((values, cb) => cb({ description: "NEIN" }));
-
-  //   render(
-  //     <AllProviders>
-  //       <CategoryView />
-  //     </AllProviders>
-  //   );
-  //   const username = await screen.findByLabelText(/Username/i);
-  //   const password = await screen.findByLabelText(/password/i);
-  //   const submit = await screen.findByRole("button", { name: /login/i });
-
-  //   userEvent.type(username, "test");
-  //   userEvent.type(password, "test");
-  //   userEvent.click(submit);
-
-  //   const text = await screen.findByText(/Login failed: NEIN/i);
-
-  //   expect(spy).toHaveBeenCalled();
-  //   expect(text).toBeInTheDocument();
-  //   spy.mockRestore();
-  // });
 });
 
 describe("CategoryState", () => {
