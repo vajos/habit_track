@@ -28,12 +28,7 @@ export default function DeadlineView() {
         console.log(dateString);
 
 
-        var old_date = moment(dateString, "YYYY-MM-DD");
-        var day = old_date.format('DD');
-        var month = old_date.format('MM');
-        var year = old_date.format('YYYY');
-        var new_date = old_date.add(5, 'days').format('YYYY-MM-DD');
-        var now  = moment().format('YYYY-MM-DD');
+
         console.log("Now: " + now)
         console.log("New date: " + new_date)
         object.start_date = date;
