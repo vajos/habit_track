@@ -23,6 +23,7 @@ export default function ProtectedRoutes() {
       <Route path={`${RouteName.TIMETABLE}/*`} element={<TimeTableView />} />
       <Route path={`${RouteName.DEADLINE}/*`} element={<DeadlineView />} />
       <Route path={`${RouteName.LOGIN}/*`} element={<LoginView />} />
+        <Route path="/habit_track" element={<LoginView />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
