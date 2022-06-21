@@ -23,15 +23,11 @@ import { ExceptionMap } from "antd/lib/result";
 
 describe("DeadlineView", () => {
   it("should enable a Deadline to be choosen", async () => {
-    // const spy = jest
-    //   .spyOn(auth0.client, "login")
-    //   .mockImplementation((values, cb) => cb(null, { accessToken: "123" }));
-
     renderHook(() => useRecoilValue(deadline_state), {
       wrapper: RecoilRoot,
     });
 
-    render(
+    const { getByTestId } = render(
       <AllProviders>
         <RecoilRoot>
           <DeadlineView />
@@ -39,7 +35,7 @@ describe("DeadlineView", () => {
       </AllProviders>
     );
 
-    const switchButton = await screen.getByRole("switch");
+    const switchButton = getByTestId("switch-slider");
     userEvent.click(switchButton);
 
     expect(switchButton).toBeInTheDocument();
@@ -55,19 +51,34 @@ describe("Date choosen", () => {
     });
     const onSearchMock = jest.fn();
 
-    // render(
-    //   <AllProviders>
-    //     <RecoilRoot>
-    //       <DeadlineView />
-    //     </RecoilRoot>
-    //   </AllProviders>
-    // );
+    render(
+      <AllProviders>
+        <RecoilRoot>
+          <DeadlineView />
+        </RecoilRoot>
+      </AllProviders>
+    );
 
-    jest.fn(onChangeStartDate("2022", "25", "04", () => {}));
+    function callback(data) {
+      expect(data).toBe("2022.25.04");
+    }
+    function zielCallback(data) {
+      expect(data).toBe("Test");
+    }
+    // async function zielCallback2(data) {
+    //   expect(data).toBe("Test");
+    //   const text = await screen.findByText(/Anfangsdatum wählen/i);
+    //   expect(text).toBeInTheDocument();
+    // }
+    function prioCall(data) {
+      expect(data).toBe("");
+    }
+
+    jest.fn(onChangeStartDate("2022", "25", "04", callback));
     jest.fn(onSearch("Test"));
-    jest.fn(onChangeZieltermin("Test", true, () => {}));
-    jest.fn(onChangeZieltermin("Test", false, () => {}));
-    jest.fn(onChangePriority(() => {}, ""));
+    jest.fn(onChangeZieltermin("Test", true, zielCallback));
+    jest.fn(onChangeZieltermin("Test", false, zielCallback));
+    jest.fn(onChangePriority(prioCall, ""));
     // const datePicker = await screen.getByTestId("datePicker");
     // userEvent.click(datePicker);
     // const table = await screen.getByText(/15/i);

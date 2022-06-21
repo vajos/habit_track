@@ -64,6 +64,7 @@ export default function DeadlineView() {
         <Space direction="horizontal">
           <Paragraph>Zieltermin</Paragraph>
           <Switch
+            data-testid="switch-slider"
             onChange={() => onChangeZieltermin("", zieltermin, setZieltermin)}
           />
         </Space>
