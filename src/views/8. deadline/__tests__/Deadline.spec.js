@@ -87,26 +87,25 @@ describe("Date choosen", () => {
   });
 });
 
-// it("funct", async () => {
-//   // act(async () => {
-//   renderHook(() => useRecoilValue(deadline_state), {
-//     wrapper: RecoilRoot,
-//   });
+it("funct", async () => {
+  // act(async () => {
+  renderHook(() => useRecoilValue(deadline_state), {
+    wrapper: RecoilRoot,
+  });
 
-//   render(
-//     <AllProviders>
-//       <RecoilRoot>
-//         <DeadlineView />
-//       </RecoilRoot>
-//     </AllProviders>
-//   );
-//   // const { getByTestId } = render(<Select onChange={() => jest.fn()} />);
-//   // const getPrio = getByTestId("prio");
-//   const getPrio = getByRole('textbox', { name: /12:08/i })
-//   expect(getPrio).toBeTruthy();
-//   userEvent.type(getPrio, 1);
-//   const text = await screen.findByText(/1/i);
-//   expect(text).toBeInTheDocument;
-//   // });
+  render(
+    <AllProviders>
+      <RecoilRoot>
+        <DeadlineView />
+      </RecoilRoot>
+    </AllProviders>
+  );
+  const { getByTestId } = render(<DatePicker onChange={() => jest.fn()} />);
+  const getDatePicker = getByTestId("datePicker");
+  expect(getDatePicker).toBeTruthy();
 
-// });
+  // userEvent.change(getDatePicker, { target: { value: "2022-06-22" } });
+  // const text = await screen.findByText(/2022-06-22/i);
+  // expect(text).toBeInTheDocument;
+  // });
+});

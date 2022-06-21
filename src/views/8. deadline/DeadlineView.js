@@ -27,26 +27,6 @@ export default function DeadlineView() {
     priority: null,
   };
 
-  //   function onSearch(val) {
-  //     console.log("search:", val);
-  //   }
-  //   const onChangeStartDate = (date, dateString) => {
-  //     console.log(date);
-  //     object.start_date = date;
-  //   };
-
-  //   function onChangeZieltermin(checked) {
-  //     console.log(`switch to ${checked}`);
-  //     setZieltermin(checked);
-  //     if (zieltermin) {
-  //       return <Paragraph>Anfangsdatum wählen</Paragraph>;
-  //     }
-  //   }
-
-  //   function onChangePriority(priority) {
-  //     object.priority = priority;
-  //   }
-
   return (
     <>
       {" "}
