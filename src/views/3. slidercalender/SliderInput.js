@@ -18,6 +18,7 @@ export default function SliderInput({ plainOptions, date, marked }) {
   useEffect(() => {
     parseData();
   });
+
   function parseData() {
     marked.map((x) => {
       data.push(x);
