@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {Carousel} from "antd";
+import {Carousel, Input, Space} from "antd";
 import SliderInput from "./SliderInput";
 
 import moment from "moment";
@@ -7,6 +7,8 @@ import {useAuth0} from "@auth0/auth0-react";
 import {useNavigate} from "react-router-dom";
 import {useRecoilState} from "recoil";
 import {old_marked_state, user_meta_data_state} from "../../atoms/atoms";
+import Paragraph from "antd/es/typography/Paragraph";
+import {cloneDeep} from "lodash";
 
 //DATABASE =>
 
@@ -17,6 +19,8 @@ export default function SliderView() {
     const [fff, setfff] = useRecoilState(old_marked_state);
 
     let habits = user_data.habits;
+
+
 
 
     function LogoutButton(props) {
@@ -33,12 +37,30 @@ export default function SliderView() {
         );
     }
 
+    function Profil(props) {
+        const {logout, isAuthenticated} = useAuth0();
+        const navigate = useNavigate();
+
+        function redirect() {
+            navigate("/Profil");
+        }
+        return (
+            isAuthenticated && (
+                <button onClick={redirect.bind(this)}>
+                    Profil
+                </button>
+            )
+        );
+    }
+
+
+
 
 
     let tt = moment().format('YYYY-MM-DD').toString();
 
 
-    const [plainOptions, setPlainOptions] = useState({plainOption:[], marked: []});
+    const [plainOptions, setPlainOptions] = useState({plainOption:[], marked: [""]});
     const [slide_date, setSlideDate] = useState(tt);
 
 
@@ -55,7 +77,7 @@ export default function SliderView() {
                 for (let b = 0; b < habits[i].marked.length; b++) {
                     if (moment(current_slide_date).isSame(habits[i].marked[b].date)) {
                         plainOptions.marked.push(habits[i].habit_name);
-                        console.log("MARKIERT MUSS SEIN Date " + current_slide_date + " found: " + plainOptions.marked);
+                        console.log("MARKIERT MUSS SEIN Date " + current_slide_date + " found: " + plainOptions.marked[plainOptions.marked.length-1]);
                     }
                 }
 
@@ -79,6 +101,7 @@ export default function SliderView() {
 
         }
 
+        setfff(plainOptions.marked);
 
         return plainOptions;
     }
@@ -111,7 +134,7 @@ export default function SliderView() {
     useEffect(() => {
 
         setPlainOptions(getHabitsForSlide(slide_date));
-        setfff(plainOptions.marked);
+
 
     }, [slide_date]);
 
@@ -132,6 +155,7 @@ export default function SliderView() {
                 </div>
             </Carousel>
             <LogoutButton/>
+            <Profil></Profil>
         </>
     );
 }

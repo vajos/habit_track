@@ -7,6 +7,7 @@ import EvaluateView from "../views/5. evaluate/EvaluateView";
 import SliderView from "../views/3. slidercalender/SliderView";
 import CategoryView from "../views/4. category/CategoryView";
 import LoginView from "../views/1. login/LoginView";
+import ProfilView from "../views/profil/ProfilView";
 
 export default function ProtectedRoutes() {
   return (
@@ -17,6 +18,7 @@ export default function ProtectedRoutes() {
       <Route path={`${RouteName.CATEGORY}/*`} element={<CategoryView />} />
       <Route path={`${RouteName.EVALUATE}/*`} element={<EvaluateView />} />
       <Route path={`${RouteName.LOGIN}/*`} element={<LoginView />} />
+        <Route path={`${RouteName.PROFIL}/*`} element={<ProfilView />} />
         <Route path="/habit_track" element={<LoginView />} />
       <Route path="*" element={<NotFound />} />
     </Routes>

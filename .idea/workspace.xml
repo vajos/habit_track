@@ -12,6 +12,7 @@
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/atoms/atoms.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/atoms/atoms.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/protected.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/protected.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/routesnames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/routesnames.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/1. login/LoginView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/1. login/LoginView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/3. slidercalender/SliderInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/3. slidercalender/SliderInput.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/3. slidercalender/SliderView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/3. slidercalender/SliderView.js" afterDir="false" />
@@ -52,7 +53,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Vaio/Downloads/fdf/habit_track",
+    "last_opened_file_path": "C:/Users/Vaio/Desktop/fsdfs/habit_track",
     "nodejs_package_manager_path": "yarn",
     "ts.external.directory.path": "C:\\Users\\Vaio\\AppData\\Local\\JetBrains\\Toolbox\\apps\\WebStorm\\ch-0\\221.5787.30\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
@@ -76,7 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1655827987679</updated>
       <workItem from="1655827988862" duration="18642000" />
-      <workItem from="1655890319225" duration="11693000" />
+      <workItem from="1655890319225" duration="18346000" />
     </task>
     <servers />
   </component>

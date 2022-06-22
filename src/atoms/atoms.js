@@ -32,7 +32,11 @@ export const deadline_state = atom({
 
 export const user_meta_data_state = atom({
     key: 'user_meta_data_state', // unique ID (with respect to other atoms/selectors)
-    default: null,
+    default: {
+        "habits": [],
+        "name": "",
+        "alter": 0
+    },
 });
 
 export const old_marked_state = atom({
