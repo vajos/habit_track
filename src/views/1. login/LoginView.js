@@ -129,13 +129,23 @@ export default function LoginView() {
                             console.log(e);
                         }
                     };
-                    //wenn noch keine daten beim user drinnen fütter mit leeren objects
-                    const isEmpty = Object.keys(user_metadata).length === 0;
+                   
 
+                    
+                    try {
+                              //wenn noch keine daten beim user drinnen fütter mit leeren objects
+                    const isEmpty = Object.keys(user_metadata).length === 0;
                     if (isEmpty) {
                         sUserMetadata().then(r => null);
                         setUserMetadata(user_data_2);
                     }
+                    } catch (e) {
+                        sUserMetadata().then(r => null);
+                        setUserMetadata(user_data_2);
+                    }
+                };
+                    
+                                 
                     navigate("/slide");
 
 
