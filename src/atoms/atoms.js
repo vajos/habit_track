@@ -29,3 +29,15 @@ export const deadline_state = atom({
         priority: null
     }, // default value (aka initial value)
 });
+
+export const user_meta_data_state = atom({
+    key: 'user_meta_data_state', // unique ID (with respect to other atoms/selectors)
+    default: null,
+});
+
+export const old_marked_state = atom({
+    key: 'old_marked_state', // unique ID (with respect to other atoms/selectors)
+    default: [],
+});
+
+

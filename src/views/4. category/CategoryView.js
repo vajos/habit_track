@@ -13,7 +13,6 @@ export default function CategoryView() {
     const navigate = useNavigate();
 
     function redirect(category) {
-        console.log(category);
         setCategory(category);
         navigate("/evaluate")
     }
