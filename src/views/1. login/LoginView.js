@@ -143,7 +143,7 @@ export default function LoginView() {
                         sUserMetadata().then(r => null);
                         setUserMetadata(user_data_2);
                     }
-                };
+               
                     
                                  
                     navigate("/slide");
