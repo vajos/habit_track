@@ -10,6 +10,6 @@ describe("Header", () => {
       </AllProviders>
     );
 
-    expect(screen.getByText(/crap stories/i)).toBeInTheDocument();
+    expect(screen.getByText(/habit track/i)).toBeInTheDocument();
   });
 });

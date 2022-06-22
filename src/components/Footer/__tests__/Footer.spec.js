@@ -9,6 +9,6 @@ describe("Footer", () => {
       </>
     );
 
-    expect(screen.getByText(/ADIS und Co./i)).toBeInTheDocument();
+    expect(screen.getByText(/Internetprogrammierung 2/i)).toBeInTheDocument();
   });
 });

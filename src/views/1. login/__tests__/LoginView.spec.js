@@ -29,7 +29,7 @@ describe("LoginView", () => {
     expect(button).toBeTruthy();
 
     // userEvent.click(button);
-    // expect(window.location.pathname).toEqual("/slide");
+    // expect(window.location.pathname).toEqual("https://dev-xc-yysm1.eu.auth0.com/u/login?state=hKFo2SBVWmlicXcyMmVCaXczWFdTamdaQUJHNkZITzY1MnFqWqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIHJGY2ZYcFluWmhDZWRNdzlROW9EY3FqbUk5RVduZ3pQo2NpZNkgZ254YkJ1cWVLd1FnbGtITHdaSHAzaENYbDBkV0JRUE4");
 
     // const username = await screen.findByLabelText(/Username/i);
     // const password = await screen.findByLabelText(/password/i);

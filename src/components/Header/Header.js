@@ -19,9 +19,9 @@ export default function Header() {
   return (
     <HeaderContainer>
       <Typography.Title style={{ margin: 0, fontSize: "48px" }}>
-        Crap Stories
+        Habit Track
       </Typography.Title>
-      <PunchoutText>You can do better than that</PunchoutText>
+      <PunchoutText>Just start NOW</PunchoutText>
     </HeaderContainer>
   );
 }

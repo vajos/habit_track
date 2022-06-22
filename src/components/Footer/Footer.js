@@ -9,7 +9,7 @@ export default function Footer() {
 
   return (
     <FooterContainer>
-      <small>© ADIS und Co. {currentDate.getFullYear()}</small>
+      <small>© Internetprogrammierung 2 {currentDate.getFullYear()}</small>
     </FooterContainer>
   );
 }
