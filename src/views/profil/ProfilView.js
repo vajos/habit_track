@@ -116,12 +116,12 @@ export default function ProfilView() {
 
   function onFinish(values) {
     setName(values.name);
-    setAlter(values.alter);
+    setAlter(values.age);
 
     console.log("Fdfsdfdsfsdfsdfsdfsd");
     let user_metadata = cloneDeep(userMetadata);
     user_metadata.name = values.name;
-    user_metadata.alter = 15;
+    user_metadata.alter = values.age;
     let user_data = {
       user_metadata
     };
@@ -159,7 +159,7 @@ export default function ProfilView() {
         onFinish={onFinish}
         initialValues={{
           name: name,
-          alter: alter
+          age: alter
         }}
       >
         <Form.Item name="name" label="Name">

@@ -10,5 +10,6 @@ export const RouteName = {
   DEFINEHABIT: "/definehabit",
   TIMETABLE: "/timetable",
   DEADLINE: "/deadline",
-  PROFIL: "/Profil"
+  PROFIL: "/Profil",
+  CONTACT: "/contact"
 };

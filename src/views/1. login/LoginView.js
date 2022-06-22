@@ -33,7 +33,7 @@ export default function LoginView() {
             !isAuthenticated && (
                 <button onClick={() => loginWithRedirect({
 
-                    redirectUri: "http://localhost:3000/habit_track/" //Beim pushen auf https://vajos.github.io/habit_track/ ändern
+                    redirectUri: "https://vajos.github.io/habit_track/" //http://localhost:3000/habit_track/" //Beim pushen auf https://vajos.github.io/habit_track/ ändern
                 })}>
                     Anmelden
                 </button>
@@ -150,7 +150,7 @@ export default function LoginView() {
         return (
             isAuthenticated && (
                 <button onClick={() => logout({
-                    returnTo: "http://localhost:3000/habit_track/"
+                    returnTo: "https://vajos.github.io/habit_track/"
                 })}>
                     Abmelden
                 </button>

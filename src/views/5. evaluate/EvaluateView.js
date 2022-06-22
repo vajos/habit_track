@@ -23,30 +23,6 @@ export default function EvaluateView() {
     const {user, isAuthenticated, getAccessTokenSilently} = useAuth0();
     const [userMetadata, setUserMetadata] = useRecoilState(user_meta_data_state);
 
-    let user_data = {
-        "user_metadata":
-            {
-                "habits":
-                    [
-                        {
-                            "habit_name": "test",
-                            "start_date": "2022-05-18",
-                            "end_date": null,
-                            "frequency_in_days": 3,
-                            "marked":[]
-                        },
-                        {
-                            "habit_name": "zocfdsfdken",
-                            "start_date": "2022-04-18",
-                            "end_date": null,
-                            "frequency_in_days": 5,
-                            "marked":[]
-                        },
-                    ],
-                "name": "",
-                "alter": 0
-            }
-    };
 
     function add_user_Data(user_data) {
         console.log(isAuthenticated);

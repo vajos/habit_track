@@ -2,34 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb81a82a-c04c-477d-b0e5-1c1b151966f1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/deploy.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/jest-code-coverage.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/habit_track.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/habit_track.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/atoms/atoms.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/atoms/atoms.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/protected.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/protected.routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/routesnames.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/routesnames.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/1. login/LoginView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/1. login/LoginView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/3. slidercalender/SliderInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/3. slidercalender/SliderInput.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/3. slidercalender/SliderView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/3. slidercalender/SliderView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/4. category/CategoryView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/4. category/CategoryView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/5. evaluate/EvaluateView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/5. evaluate/EvaluateView.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/6. defineHabit/DefineHabit.routes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/6. defineHabit/DefineHabitView.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/6. defineHabit/__tests__/DefineHabit.test.js.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/6. defineHabit/__tests__/LoginView.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/7. timetable/TimeTable.routes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/7. timetable/TimeTableView.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/7. timetable/__tests__/LoginView.spec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/7. timetable/__tests__/Timetable.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/8. deadline/Deadline.routes.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/8. deadline/DeadlineView.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/8. deadline/__tests__/Deadline.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/8. deadline/__tests__/LoginView.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/profil/ProfilView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/profil/ProfilView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +33,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Vaio/Desktop/fsdfs/habit_track",
+    "last_opened_file_path": "C:/Users/Vaio/Desktop/f/habit_track",
     "nodejs_package_manager_path": "yarn",
     "ts.external.directory.path": "C:\\Users\\Vaio\\AppData\\Local\\JetBrains\\Toolbox\\apps\\WebStorm\\ch-0\\221.5787.30\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
@@ -78,6 +58,7 @@
       <updated>1655827987679</updated>
       <workItem from="1655827988862" duration="18642000" />
       <workItem from="1655890319225" duration="18346000" />
+      <workItem from="1655911469250" duration="889000" />
     </task>
     <servers />
   </component>

@@ -53,6 +53,22 @@ export default function SliderView() {
         );
     }
 
+    function ContactUs(props) {
+        const {logout, isAuthenticated} = useAuth0();
+        const navigate = useNavigate();
+
+        function redirect() {
+            navigate("/contact");
+        }
+        return (
+            isAuthenticated && (
+                <button onClick={redirect.bind(this)}>
+                    Contact US
+                </button>
+            )
+        );
+    }
+
 
 
 
@@ -156,6 +172,7 @@ export default function SliderView() {
             </Carousel>
             <LogoutButton/>
             <Profil></Profil>
+            <ContactUs></ContactUs>
         </>
     );
 }
