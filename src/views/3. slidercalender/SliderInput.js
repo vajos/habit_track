@@ -164,7 +164,6 @@ export default function SliderInput({ plainOptions, date, marked }) {
             ADD OR DELETE HABIT
           </Button>
         </Link>
-        <Button>Profil222222222</Button>
       </div>
     </>
   );

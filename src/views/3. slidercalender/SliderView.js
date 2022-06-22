@@ -13,43 +13,48 @@ import { cloneDeep } from "lodash";
 //DATABASE =>
 
 export default function SliderView() {
+  const { logout, isAuthenticated } = useAuth0();
+  const navigate = useNavigate();
+
   console.log("INSIDE SLIDER VIEW");
   const [user_data, setUserMetadata] = useRecoilState(user_meta_data_state);
   const [fff, setfff] = useRecoilState(old_marked_state);
 
   let habits = user_data.habits;
 
-  function LogoutButton(props) {
-    const { logout, isAuthenticated } = useAuth0();
+  //   function LogoutButton(props) {
+  //     const { logout, isAuthenticated } = useAuth0();
 
-    return isAuthenticated && <button onClick={() => logout()}>Logi</button>;
-  }
+  //     return (
+  //       isAuthenticated && <button onClick={() => logout()}>Abmelden</button>
+  //     );
+  //   }
 
-  function Profil(props) {
-    const { logout, isAuthenticated } = useAuth0();
-    const navigate = useNavigate();
+  //   function Profil(props) {
+  //     const { logout, isAuthenticated } = useAuth0();
+  //     const navigate = useNavigate();
 
-    function redirect() {
-      navigate("/Profil");
-    }
-    return (
-      isAuthenticated && <button onClick={redirect.bind(this)}>Profil</button>
-    );
-  }
+  //     function redirect() {
+  //       navigate("/Profil");
+  //     }
+  //     return (
+  //       isAuthenticated && <button onClick={redirect.bind(this)}>Profil</button>
+  //     );
+  //   }
 
-  function ContactUs(props) {
-    const { logout, isAuthenticated } = useAuth0();
-    const navigate = useNavigate();
+  //   function ContactUs(props) {
+  //     const { logout, isAuthenticated } = useAuth0();
+  //     const navigate = useNavigate();
 
-    function redirect() {
-      navigate("/contact");
-    }
-    return (
-      isAuthenticated && (
-        <button onClick={redirect.bind(this)}>Contact US</button>
-      )
-    );
-  }
+  //     function redirect() {
+  //       navigate("/contact");
+  //     }
+  //     return (
+  //       isAuthenticated && (
+  //         <button onClick={redirect.bind(this)}>Contact US</button>
+  //       )
+  //     );
+  //   }
 
   let tt = moment().format("YYYY-MM-DD").toString();
 
@@ -148,16 +153,17 @@ export default function SliderView() {
 
   return (
     <>
-      <Button>Default Button</Button>
       <Carousel dots={false} beforeChange={onChange} effect="fade">
         <div>{slide}</div>
         <div>{slide}</div>
         <div>{slide}</div>
       </Carousel>
-      <LogoutButton />
-
+      <Button onClick={() => logout()}>Abmelden</Button>
+      <Button onClick={() => navigate("/Profil")}>Profil</Button>
+      <Button onClick={() => navigate("/contact")}>Kontakt</Button>
+      {/* <LogoutButton />
       <Profil data-testid="profilButton"></Profil>
-      <ContactUs></ContactUs>
+      <ContactUs></ContactUs> */}
     </>
   );
 }
