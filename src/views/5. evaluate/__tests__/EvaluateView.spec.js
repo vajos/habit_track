@@ -12,6 +12,7 @@ describe("EvaluateView", () => {
     renderHook(() => useRecoilValue(evaluate_state), {
       wrapper: RecoilRoot,
     });
+    const funct = jest.fn();
 
     render(
       <AllProviders>
@@ -20,17 +21,26 @@ describe("EvaluateView", () => {
         </RecoilRoot>
       </AllProviders>
     );
-    // const username = await screen.findByLabelText(/Username/i);
-    // const password = await screen.findByLabelText(/password/i);
-    // const submit = await screen.findByRole("button", { name: /login/i });
 
-    // userEvent.type(username, "test");
-    // userEvent.type(password, "test");
-    // userEvent.click(submit);
+    const button = await screen.getByRole("button", { name: /weiter/i });
+    userEvent.click(button);
+    expect(button).not.toBeDisabled();
+    expect(window.location.pathname).toEqual("/");
 
-    // const text = await screen.findByText(/Login successful/i);
+    const input = await screen.queryByPlaceholderText(/name der gewohnheit/i);
+    expect(input).toBeInTheDocument();
+    userEvent.type(input, "Haus");
 
-    // expect(spy).toHaveBeenCalled();
-    // expect(text).toBeInTheDocument();
+    const spin = await screen.getByRole("spinbutton");
+    expect(spin).toBeInTheDocument;
+    userEvent.type(spin, "1");
+
+    const date = await screen.queryByPlaceholderText(/Select date/i);
+    expect(date).toBeInTheDocument();
+    userEvent.type(date, "2022-06-22");
+
+    userEvent.click(button);
+    expect(button).not.toBeDisabled();
+    expect(window.location.pathname).toEqual("/");
   });
 });
