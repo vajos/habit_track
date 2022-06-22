@@ -9,11 +9,10 @@ CodeCoverage: https://codecov.io/github/vajos/habit_track/
 4. Ich möchte meine Gewohnheiten als Tageskalender sehen dabei steht oben das Datum und drunter sind die Gewohnheiten und ob ich Sie bereits erledigt habe.
 5. Ich kann die Gewohnheiten als erledigt markieren.
 6. Ich kann neue Gewohnheiten hinzufügen.
-7. Ich kann die Frequenz der Gewohnheit in Tagen anpassen dabei bestimme ich ein Startdatum und die frequenz. Mein Kalender zeigt mir die Gewohnheiten nur an den passenden Tagen an. Bsp 20.02.2022 ist der Startdatum und die frequenz 3 die Gewohnheit wird nur am: 20.02, 23.02, 26.02 .... angezeigt.
+7. Ich kann die Frequenz der Gewohnheit beim hinzufügen in Tagen anpassen dabei bestimme ich ein Startdatum und die frequenz. Mein Kalender zeigt mir die Gewohnheiten nur an den passenden Tagen an. Bsp 20.02.2022 ist der Startdatum und die frequenz 3 die Gewohnheit wird nur am: 20.02, 23.02, 26.02 .... angezeigt.
 8. Ich kann Gewohnheiten wieder entfernen.
 9. Ich möchte das meine Gewohnheiten nachdem ich Sie hinzugefügt habe auch gespeichert wird so das ich mich von einem anderen Gerät anmelden kann und alle meine Gewohnheiten noch da sind.
-
-
-10. Ich kann meiner Gewohnheit eine Kategorie mitgeben. Diese ist wichtig für die spätere graphische Analyse.
+10. Ich kann über ein Kontaktier Formular mich bei der habit_Track firma melden und dene eine email schicken.
 11. Ich kann mein Profil mit all meinen Profildaten angucken.
 12. Ich kann meine Profildaten verändern.
+13. Ich kann meiner Gewohnheit eine Kategorie mitgeben. Diese ist wichtig für die spätere graphische Analyse.
