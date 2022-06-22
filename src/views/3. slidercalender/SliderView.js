@@ -29,7 +29,7 @@ export default function SliderView() {
         return (
             isAuthenticated && (
                 <button onClick={() => logout({
-                    returnTo: "http://localhost:3000/habit_track/"
+                    returnTo: "https://vajos.github.io/habit_track/"
                 })}>
                     Abmelden
                 </button>
